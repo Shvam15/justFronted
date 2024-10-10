@@ -11,7 +11,7 @@ function Orders() {
 
     const getOrders = async () => {
         try {
-            const data = await axios.get(`https://sandbox.cashfree.com/pg/orders/order_1728536467466/extended`);
+            const data = await axios.get(`https://sandbox.cashfree.com/pg/orders`);
             console.log(data,"fetchdata")
             setOrders(data)
         } catch (error) {
