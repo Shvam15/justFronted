@@ -11,7 +11,8 @@ function Orders() {
 
     const getOrders = async () => {
         try {
-            const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/orders`);
+            const data = await axios.get(`https://sandbox.cashfree.com/pg/orders/order_1728536467466/extended`);
+            console.log(data,"fetchdata")
             setOrders(data)
         } catch (error) {
             console.log(error)
